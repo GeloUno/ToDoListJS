@@ -1,0 +1,18 @@
+/**
+ * initialization data base connectio this file is gitignore
+ */
+
+var config = {
+    apiKey: "**** ADD FROM YOUR FIRE BASE ****",
+    authDomain: "**** ADD FROM YOUR FIRE BASE ****",
+    databaseURL: "**** ADD FROM YOUR FIRE BASE ****",
+    projectId: "**** ADD FROM YOUR FIRE BASE ****",
+    storageBucket: "**** ADD FROM YOUR FIRE BASE ****",
+    messagingSenderId: "**** ADD FROM YOUR FIRE BASE ****"
+
+};
+firebase.initializeApp(config);
+const db = firebase.firestore();
+db.settings({
+    timestampsInSnapshots: true
+});

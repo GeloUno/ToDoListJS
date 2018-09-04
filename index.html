@@ -14,8 +14,12 @@
 <body>
     <h1>To Do List</h1>
     <div class="container">
-        <form id="add-to-do-form"></form>
-        <ul id="to-do-list"></ul>
+        <form id="add-to-do-form">
+        <input type="text" name="title" placeholder="Title: ">
+        <input type="text" name="description" placeholder="Description: ">
+        <button>Add To Do</button>        
+    </form>
+    <ul id="to-do-list"></ul>
     </div>
     
     <script src="db.js"></script>   
@@ -23,3 +27,5 @@
 </body>
 
 </html>
+
+<!-- onsubmit="return false" -->
