@@ -23,12 +23,18 @@ function createToDoListLi(el) {
     // delete function from evenlistener click button 
 
     cross.addEventListener('click', e => {
-      //  e.stopPropagation();
-        console.log(e.target.parentElement.getAttribute('id'));
+        //  e.stopPropagation();
+        // console.log(e.target.parentElement.getAttribute('id'));
+
         let id = e.target.parentElement.getAttribute('id');
-        db.collection('todoList').doc(id).delete().then(()=>{
-        //    console.log("Delete: " + id);
-        });
+        let name = document.getElementById(id).firstChild.textContent;
+        var answer = confirm("Delete " + name + " from List To Do?")
+        if (answer) {
+            db.collection('todoList').doc(id).delete().then(() => {
+                //    console.log("Delete: " + id);
+
+            });
+        }
     })
 }
 // geting data from FireBase
@@ -55,21 +61,20 @@ addToDoForm.addEventListener('submit', (e) => {
 
 });
 
-db.collection('todoList').onSnapshot(snapshot =>{
+db.collection('todoList').onSnapshot(snapshot => {
     let changes = snapshot.docChanges();
-  //  console.log(changes);
+    //  console.log(changes);
     changes.forEach(element => {
-      //  console.log(element);
-        if(element.type =='added'){
-         //   console.log(element.doc.data());
+        //  console.log(element);
+        if (element.type == 'added') {
+            //   console.log(element.doc.data());
             createToDoListLi(element.doc);
-        }
-        else if(element.type =='removed'){
-          //  console.log(element.doc.id);
-            let id = toDoList.querySelector('[id='+ element.doc.id +']');
-          //  console.log("removed"+id);
+        } else if (element.type == 'removed') {
+            //  console.log(element.doc.id);
+            let id = toDoList.querySelector('[id=' + element.doc.id + ']');
+            //  console.log("removed"+id);
             toDoList.removeChild(id);
         }
     });
-    
+
 })
