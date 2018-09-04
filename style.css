@@ -1,0 +1,88 @@
+body{
+    background-color:#ffacfe;
+    color: white;
+    /* font-family: 'Gloria Hallelujah', cursive; */
+    font-family: 'Indie Flower', cursive;
+}
+body>h1{   
+    text-align: center; 
+    font-size: 50px;
+    margin: 0px;
+    text-shadow: 10px 5px 10px #aaa;
+   
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: white;
+    /* align-items: center; */
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50px 0px 50px 0px;
+}
+form{
+    margin: 0px;
+    margin-top: 25px;
+    padding: 10px;
+    text-align: center;
+    
+}
+input{
+    margin: 10px;
+    border-style: none;
+    border-bottom-style: solid;
+    border-color: #cf39ca;
+}
+span:first-child {
+    display: grid;   
+    color: #cf39ca ;
+      font-size:25px;
+
+}
+span:nth-child(2){
+    display: inline;   
+    color: #e66de4;   
+    font-size:18px;
+    
+}
+button{
+    padding: 5px 20px;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #cf39ca;
+    border: none;
+    border-radius: 15px 0px 15px 0px;
+    box-shadow: 0 10px 10px #999;
+    transition: all 500ms ease;
+
+}
+button:hover{
+    padding: 3px 18px;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    outline:none ;
+    color: #cf39ca ;
+    background-color:#fff;
+    border-style: solid;
+    border-color: #cf39ca;
+    border-width: 2px;
+    border-radius: 15px 0px 15px 0px;
+    box-shadow: 0 10px 10px #999;
+    
+}
+button{
+    float: right;
+    margin-right: 50px;
+}
+ul>li{
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+*:focus{
+    outline: none;
+}
