@@ -1,7 +1,6 @@
 body{
     background-color:#ffacfe;
     color: white;
-    /* font-family: 'Gloria Hallelujah', cursive; */
     font-family: 'Indie Flower', cursive;
 }
 body>h1{   
@@ -26,6 +25,8 @@ form{
     margin-top: 25px;
     padding: 10px;
     text-align: center;
+    margin-right: 0px;   
+    padding-right: 0px;   
     
 }
 input{
@@ -49,6 +50,7 @@ span:nth-child(2){
 button{
     padding: 5px 20px;
     font-size: 20px;
+    height: 35px;  
     text-align: center;
     cursor: pointer;
     outline: none;
@@ -85,4 +87,40 @@ ul>li{
 }
 *:focus{
     outline: none;
+}
+@media only screen and (max-width: 700px) {
+   
+    .container{
+        
+        width:400px;
+    }
+    form{
+        display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin: 10px;
+    padding: 10px;    
+    }
+   form>button{
+        float: none;
+        margin-top: 25px;
+        margin-right: 10px;
+        margin-left: 10px;
+        
+    }
+    ul{
+        margin-right: 10px;
+        margin-left: 10px;
+        padding: 10px;
+    }
+    ul>li{
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    li>button{
+        width: 100px;         
+        margin-left: auto;
+        margin-right: 10px;;
+    }
 }
